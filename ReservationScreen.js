@@ -45,7 +45,9 @@ const ReservationScreen = () => {
                 {
                     text: 'OK',
                     onPress: () =>
-                        console.log('OK Pressed')
+
+                        
+                        
                 }
             ]
         );
