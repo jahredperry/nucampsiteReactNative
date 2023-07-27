@@ -25,19 +25,21 @@ const ReservationScreen = () => {
         setDate(currentDate);
     };
 
-    const handleReservation = () =>
+    const handleReservation = () => {
+        const message = `Number of Campers: ${campers}
+                            \nHike-In? ${hikeIn}
+                            \nDate: ${date.toLocaleDateString('en-US')}`;
         Alert.alert(
-            'Begin Search ?',
-            'Number of Campers: ' + { campers },
-            'Hike-in? true',
-            'Date:' + { date },
+            'Begin Search?',                {
+                     message,
             [
                 {
-                    text: 'Cancel',
+                    text: 'Cancel',                  
                     onPress: () =>
-                        console.log(
-                            campsite.name + 'Not Deleted'
-                        ),
+                        {
+                        console.log('Reservation Search Canceled');
+                            resetForm();
+                    },                    
                     style: 'cancel'
                 },
                 {
