@@ -45,9 +45,9 @@ const ReservationScreen = () => {
                 {
                     text: 'OK',
                     onPress: () =>
-             ].
+             ]'
              { cancelable: false }
-        );             
+        );            
                 }
             ]
         );
